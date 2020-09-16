@@ -4,6 +4,7 @@ MAINTAINER   no-name
 
 ENV	  JAVA_OPTIONS -Xmx512m
 
+CMD   /opt/rh/rh-maven36/root/usr/share/maven
+
 RUN mvn -version
 
-CMD   /opt/rh/rh-maven36/root/usr/share/maven
