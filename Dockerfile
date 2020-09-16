@@ -20,7 +20,7 @@ WORKDIR /usr/src/app
 # install maven dependency packages (keep in image)
 COPY pom.xml /usr/src/app
 #RUN mvn -T 1C install && rm -rf target
-RUN mvn clean install && rm -rf target
+RUN mvn clean install
 # copy other source files (keep in image)
 COPY src /usr/src/app/src
 
