@@ -4,9 +4,9 @@ MAINTAINER   no-name
 
 ENV	JAVA_OPTIONS -Xmx512m
 
-RUN /opt/rh/rh-maven36/root/usr/share/maven
+#RUN /opt/rh/rh-maven36/root/usr/share/maven
 
-CMD /opt/rh/rh-maven36/root/usr/share/maven
+#CMD /opt/rh/rh-maven36/root/usr/share/maven
 
 RUN ls /usr/local/s2i/
 
