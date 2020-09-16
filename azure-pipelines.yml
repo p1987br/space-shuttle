@@ -17,6 +17,12 @@ steps:
     command: 'build'
     Dockerfile: '**/Dockerfile'
 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'quayServiceConnection'
+    repository: 'space-shuttle'
+    command: 'push'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
