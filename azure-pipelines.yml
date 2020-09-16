@@ -16,7 +16,7 @@ steps:
   inputs:
     command: 'build'
     containerRegistry: 'quayServiceConnection'
-    repository: 'space-shuttle'
+    repository: 'p1987br/space-shuttle'
     Dockerfile: '**/Dockerfile'
     tags: latest
 
