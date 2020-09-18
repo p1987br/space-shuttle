@@ -31,13 +31,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'quayServiceConnection'
-    command: 'start'
-    arguments: '-it --entrypoint ./build-app.sh'
-    container: 'quay.io/p1987br/space-shuttle:latest'
-
-- task: Docker@2
-  inputs:
-    containerRegistry: 'quayServiceConnection'
     repository: 'p1987br/space-shuttle'
     command: 'push'
     tags: latest
