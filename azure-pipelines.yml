@@ -20,6 +20,10 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: latest
 
+- script: |
+    docker run p1987br/space-shuttle
+  displayName: 'Run a docker'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'quayServiceConnection'
