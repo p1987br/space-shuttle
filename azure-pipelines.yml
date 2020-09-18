@@ -25,7 +25,7 @@ steps:
   displayName: 'Run a docker'
 
 - script: |
-    docker run quay.io/p1987br/space-shuttle
+    docker run -it --entrypoint /bin/bash quay.io/p1987br/space-shuttle
   displayName: 'Run a docker'
 
 - task: Docker@2
