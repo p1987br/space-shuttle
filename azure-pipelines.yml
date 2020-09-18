@@ -20,14 +20,6 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: latest
 
-- script: |
-    docker images
-  displayName: 'Run a docker'
-
-- script: |
-    docker run --entrypoint ./build-app.sh quay.io/p1987br/space-shuttle
-  displayName: 'Run a docker'
-
 - task: Docker@2
   inputs:
     containerRegistry: 'quayServiceConnection'
