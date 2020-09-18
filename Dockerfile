@@ -22,14 +22,23 @@ COPY pom.xml /usr/src/app
 # copy other source files (keep in image)
 COPY src /usr/src/app/src
 #RUN mvn -T 1C install && rm -rf target
-RUN mvn clean install
 
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+# copy build script
+COPY  build-app.sh /usr/src/app
 
-EXPOSE 8080
+# Run the build
+CMD   build-app.sh
 
-ENTRYPOINT ["java","-jar","app.jar"]
+#RUN mvn clean install
+
+#ARG JAR_FILE=target/*.jar
+#COPY ${JAR_FILE} app.jar
+
+#COPY DockerfileRun Dockerfile
+
+#EXPOSE 8080
+
+#ENTRYPOINT ["java","-jar","app.jar"]
 
 
 
