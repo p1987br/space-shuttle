@@ -21,6 +21,10 @@ steps:
     tags: latest
 
 - script: |
+    docker images
+  displayName: 'Run a docker'
+
+- script: |
     docker run p1987br/space-shuttle
   displayName: 'Run a docker'
 
