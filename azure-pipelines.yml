@@ -23,6 +23,13 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'quayServiceConnection'
+    command: 'start'
+    arguments: '-ti bash'
+    container: 'p1987br/space-shuttle'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'quayServiceConnection'
     repository: 'p1987br/space-shuttle'
     command: 'push'
     tags: latest
