@@ -24,14 +24,12 @@ COPY src /usr/src/app/src
 #RUN mvn -T 1C install && rm -rf target
 
 # copy build script
-COPY  build-app.sh /usr/src/app
-
-RUN chmod +x build-app.sh
-
+#COPY  build-app.sh /usr/src/app
+#RUN chmod +x build-app.sh
 # Run the build
-CMD   build-app.sh
+#CMD   build-app.sh
 
-#RUN mvn clean install
+RUN mvn clean install
 
 #ARG JAR_FILE=target/*.jar
 #COPY ${JAR_FILE} app.jar
