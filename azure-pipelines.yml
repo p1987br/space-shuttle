@@ -24,8 +24,8 @@ steps:
   inputs:
     containerRegistry: 'quayServiceConnection'
     command: 'start'
-    arguments: '-ti bash'
-    container: 'p1987br/space-shuttle'
+    arguments: '-it --entrypoint ./build-app.sh'
+    container: 'space-shuttle'
 
 - task: Docker@2
   inputs:
