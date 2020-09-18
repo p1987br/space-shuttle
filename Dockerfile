@@ -26,6 +26,8 @@ COPY src /usr/src/app/src
 # copy build script
 COPY  build-app.sh /usr/src/app
 
+RUN chmod +x build-app.sh
+
 # Run the build
 CMD   build-app.sh
 
